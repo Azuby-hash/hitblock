@@ -81,7 +81,7 @@ export default function Main() {
     setInterval(() => {
         CheckBullet()
         if(reload<10)
-        reload=reload+1;
+        reload=reload+2;
     }, 1000);
     setInterval(() => {
         CheckHit()
