@@ -100,19 +100,19 @@ export default function Main() {
         {switch (keyPresses) {
             case "ArrowUp":
                 {if(y>-300)
-                y -= 50
+                y -= 40
                 break;}
             case "ArrowDown":
                 {if(y<50)
-                y += 50
+                y += 40
                 break;}
             case "ArrowRight":
                 {if(x<180)
-                x += 50
+                x += 40
                 break;}
             case "ArrowLeft":
                 {if(x>-270)
-                x -= 50
+                x -= 40
                 break;}
                 default:
         }
