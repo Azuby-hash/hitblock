@@ -58,8 +58,8 @@ function CheckHit() {
     for(var i=0;i<bullet.length;i++)
     for(var j=0;j<enemy.length;j++)
     {if(
-        bullet[i].getBoundingClientRect().left > enemy[j].getBoundingClientRect().left-75
-        && bullet[i].getBoundingClientRect().left < enemy[j].getBoundingClientRect().left+50
+        bullet[i].getBoundingClientRect().left > enemy[j].getBoundingClientRect().left-45
+        && bullet[i].getBoundingClientRect().left < enemy[j].getBoundingClientRect().left+40
         && bullet[i].getBoundingClientRect().top > enemy[j].getBoundingClientRect().top-50
         && bullet[i].getBoundingClientRect().top < enemy[j].getBoundingClientRect().top+50
     ){bullet[i].remove();enemy[j].remove()}}
