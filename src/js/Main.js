@@ -14,6 +14,13 @@ function Score(plus){
     }, 200);
     return score;
 };
+function Reload(plus){
+    const [state, setState] = useState(0);
+    setTimeout(() => {
+        setState(state+1)
+    }, 200);
+    return reload/2;
+};
 function Bullet() {
     return <div className="bullet" style={{ transform: "translateY(0px)", left: `${leftb}px`, top: `${topb}px` }} onClick={() => { console.log(this.getBoundingClientRect().y); }}>
                 <img className="bullet_1" src="bullet.png" alt="bullet" />

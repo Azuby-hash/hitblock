@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import './css/Main.css';
 import './css/Enemy.css';
-import Main,{BulletCreated,Score} from './js/Main';
+import Main,{BulletCreated,Score,Reload} from './js/Main';
 import EnemyMelee from './js/EnemyMelee';
 function BackGround() {
   return <div className="backGround"></div>
@@ -25,6 +25,7 @@ function Rule() {
      <br/>
     U have 1 bullet/sec<br/>
     Max : 5<br/>
+    Bullets remain : <Reload/>
   </div>
   </>
 }
