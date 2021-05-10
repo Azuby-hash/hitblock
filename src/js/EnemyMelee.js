@@ -10,7 +10,7 @@ export default function EnemyMelee() {
         setState(state+1)
         if(speech>3)speech=speech-0.05
     }, 1100);
-    enemys.push(Math.random()*465+445);
+    enemys.push(Math.random()*455+455);
     for(var i=0;i<enemys.length;i++)
     {
         enemys[i]=<Enemy key={i} left={enemys[i]} />
