@@ -1,25 +1,45 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './css/Main.css';
+import './css/Enemy.css';
+import Main,{BulletCreated} from './js/Main';
+import EnemyMelee from './js/EnemyMelee';
+function BackGround() {
+  return <div className="backGround"></div>
 }
-
+function Rule() {
+  return <>
+  <div className="rule">
+    Space : shoot <br/>
+    ArrowUp : go up<br/>
+    ArrowDown : go down<br/>
+    ArrowLeft : go left<br/>
+    ArrowRight : go right<br/>
+  </div>
+  <div className="rule rule2">
+    Hit enemy to kill<br/>
+    If enemy touch u <br/>
+    or reach bottom ,<br/>
+    you lose <br/>
+     <br/>
+    U have 1 bullet/sec<br/>
+    Max : 5<br/>
+  </div>
+  </>
+}
+const html = (
+  <>
+    <Rule/>
+    <BackGround/>
+    <Main/>
+    <BulletCreated/>
+    <div></div>
+    <EnemyMelee/>
+  </>
+)
+class App extends React.Component {
+  render(){
+    return html;
+  }
+}
 export default App;

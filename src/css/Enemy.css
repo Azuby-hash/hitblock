@@ -1,0 +1,31 @@
+.enemyMelee {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: #fc4646;
+  top: 0;
+  left: 0;
+}
+
+.backGround {
+  position: absolute;
+  left: 445px;
+  width: 520px;
+  height: 740px;
+  background-color: yellowgreen;
+  z-index: -100;
+}
+
+.rule {
+  position: absolute;
+  left: 70px;
+  top: 180px;
+  font-size: 30px;
+  line-height: 80px;
+}
+
+.rule2 {
+  left: 1050px;
+  top: 100px;
+}
+/*# sourceMappingURL=Enemy.css.map */
