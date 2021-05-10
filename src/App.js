@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import './css/Main.css';
 import './css/Enemy.css';
-import Main,{BulletCreated} from './js/Main';
+import Main,{BulletCreated,Score} from './js/Main';
 import EnemyMelee from './js/EnemyMelee';
 function BackGround() {
   return <div className="backGround"></div>
@@ -10,6 +10,7 @@ function BackGround() {
 function Rule() {
   return <>
   <div className="rule">
+    Score : <Score/><br/>
     Space : shoot <br/>
     ArrowUp : go up<br/>
     ArrowDown : go down<br/>

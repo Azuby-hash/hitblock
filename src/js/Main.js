@@ -6,12 +6,21 @@ var topb = 583
 var keyPress = {};
 var bulletReady = [];
 var reload =0;
+var score =0;
+function Score(plus){
+    const [state, setState] = useState(0);
+    setTimeout(() => {
+        setState(state+1)
+    }, 200);
+    return score;
+};
 function Bullet() {
     return <div className="bullet" style={{ transform: "translateY(0px)", left: `${leftb}px`, top: `${topb}px` }} onClick={() => { console.log(this.getBoundingClientRect().y); }}>
                 <img className="bullet_1" src="bullet.png" alt="bullet" />
                 <img className="bullet_2" src="bullet.png" alt="bullet" />
             </div>
 }
+export {Score}
 function BulletCreated() {
     for (var i = 0; i < bulletReady.length; i++) {
         bulletReady[i] = <Bullet key={i} />
@@ -62,7 +71,7 @@ function CheckHit() {
         && bullet[i].getBoundingClientRect().left < enemy[j].getBoundingClientRect().left+40
         && bullet[i].getBoundingClientRect().top > enemy[j].getBoundingClientRect().top-50
         && bullet[i].getBoundingClientRect().top < enemy[j].getBoundingClientRect().top+50
-    ){bullet[i].remove();enemy[j].remove()}}
+    ){bullet[i].remove();enemy[j].remove();score+=20}}
 }
 function CheckHit2() {
     var main = document.querySelectorAll(".main");
