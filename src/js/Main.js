@@ -27,7 +27,8 @@ function Bullet() {
                 <img className="bullet_2" src="bullet.png" alt="bullet" />
             </div>
 }
-export {Score,Main}
+export {Score}
+export {Reload}
 function BulletCreated() {
     for (var i = 0; i < bulletReady.length; i++) {
         bulletReady[i] = <Bullet key={i} />
